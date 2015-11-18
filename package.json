@@ -16,6 +16,10 @@
     "url": "https://github.com/kdblitz/ng-webpack-starter/issues"
   },
   "devDependencies": {
-    "webpack": "~1.12.6"
+    "webpack": "~1.12.6",
+    "babel-core": "~6.1.21",
+    "babel-loader": "~6.2.0",
+    "semistandard-loader": "0.0.3",
+    "babel-preset-es2015": "~6.1.18"
   }
 }
