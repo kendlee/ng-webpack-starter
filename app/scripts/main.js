@@ -1,13 +1,7 @@
 'use strict';
+import angular from 'angular';
+import Test from 'es6Module/test';
 
-class Test {
-  constructor (message) {
-    this.message = message;
-  }
+angular.module('testApp', []);
 
-  alert () {
-    window.alert(this.message);
-  }
-}
-
-new Test('it works!').alert();
+new Test('import & es6 works!').alert();

@@ -1,0 +1,22 @@
+{
+  "name": "ng-webpack-starter",
+  "description": "personalized angularJS starter kit using webpack",
+  "main": "index.js",
+  "authors": [
+    "Ken Lee"
+  ],
+  "license": "BSD",
+  "homepage": "https://github.com/kdblitz/ng-webpack-starter",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7"
+  }
+}

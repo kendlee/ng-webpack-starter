@@ -15,20 +15,32 @@ module.exports = {
     path: PATHS.destination,
     filename: 'bundle.js'
   },
-  // resolve: {
-  //
-  // },
+  resolve: {
+    root: [
+      PATHS.bower,
+      PATHS.dev_scripts
+    ],
+    alias: {
+      // lodash: 'lodash'
+      angular: 'angular/angular'
+    }
+  },
   module: {
     loaders: [
-      {
-        test: /\.js$/,
+      { test: /[\/]angular\.js$/,
+        loader: 'exports?angular' },
+      { test: /\.js$/,
         loader: 'babel?presets[]=es2015!semistandard',
-        exclude: /node_modules|bower_components/
-      }
+        exclude: /node_modules|bower_components/ }
     ]
   },
   devtool: 'source-map',
   plugins: [
-
+    new webpack.ProvidePlugin({
+      _: 'lodash'
+    }),
+    new webpack.ResolverPlugin(
+      new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
+    )
   ]
 };
