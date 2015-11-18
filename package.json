@@ -1,0 +1,18 @@
+{
+  "name": "ng-webpack-starter",
+  "version": "0.0.0",
+  "description": "personalized angularJS starter kit using webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kdblitz/ng-webpack-starter.git"
+  },
+  "author": "Ken Lee",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/kdblitz/ng-webpack-starter/issues"
+  }
+}
