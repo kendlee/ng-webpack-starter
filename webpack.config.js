@@ -21,8 +21,8 @@ module.exports = {
       PATHS.dev_scripts
     ],
     alias: {
-      // lodash: 'lodash'
-      angular: 'angular/angular'
+      lodash: 'lodash',
+      angular: 'angular'
     }
   },
   module: {
@@ -36,9 +36,6 @@ module.exports = {
   },
   devtool: 'source-map',
   plugins: [
-    // new webpack.ProvidePlugin({
-    //   _: 'lodash'
-    // }),
     new webpack.ResolverPlugin(
       new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
     )
