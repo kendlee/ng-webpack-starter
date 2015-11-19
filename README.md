@@ -1,5 +1,7 @@
 # AngularJS Webpack Starter Kit
 
-Initial items included on this starter kit:
+This starer kit is preconfigured with:
+
 1. AngularJS
-2. Karma
+2. Express server
+3. Karma
