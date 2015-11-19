@@ -1,2 +1,5 @@
-require('./sampleDirective');
-export default 'sampleModule';
+import module from './module';
+
+import './sampleDirective';
+
+export default module.name;

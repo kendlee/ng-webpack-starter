@@ -1,8 +1,8 @@
 'use strict';
 import angular from 'angular';
 import Test from 'es6Module/test';
-import sampleModule from 'sampleModule/index';
+import SampleModule from 'sampleModule/index';
 
-angular.bootstrap(document, [sampleModule]);
+angular.bootstrap(document, [SampleModule]);
 
 new Test('import & es6 works!').alert();

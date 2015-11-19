@@ -1,3 +1,3 @@
 import angular from 'angular';
 
-export default angular.module('sampleModule', []);
+export default angular.module('SampleModule', []);
