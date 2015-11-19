@@ -38,7 +38,7 @@ module.exports = function(config) {
       }
     },
 
-    reporters: ['nyan'],
+    reporters: ['nyan','html'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,

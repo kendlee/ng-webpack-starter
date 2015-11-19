@@ -4,9 +4,10 @@
   "description": "personalized angularJS starter kit using webpack",
   "main": "index.js",
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "bower install && webpack",
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start karma.conf.js",
+    "webpack": "webpack -w --progress"
   },
   "repository": {
     "type": "git",
@@ -32,7 +33,8 @@
     "karma-chrome-launcher": "~0.2.1",
     "karma-webpack": "~1.7.0",
     "karma-nyan-reporter": "~0.2.2",
-    "karma-babel-preprocessor": "~6.0.1"
+    "karma-babel-preprocessor": "~6.0.1",
+    "karma-jasmine-html-reporter": "~0.1.8"
   },
   "dependencies": {
     "express": "~4.13.3"
