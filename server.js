@@ -10,9 +10,12 @@ require('./backend/routes')(app);
 app.listen(PORT, listening);
 
 function listening() {
-  console.log('Server running on port: ' + PORT);
-  browserSync({
+  browserSync.init({
+    open: false,
+    port: 3000,
     proxy: 'localhost:' + PORT,
     files: ['app/**/*.{js,css,html}']
+  }, function() {
+    console.log('Browser sync running on port: ' + 3000);
   });
 }
