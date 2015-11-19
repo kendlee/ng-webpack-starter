@@ -1,3 +1,4 @@
+'use strict';
 import sampleModule from './module.js';
 
 sampleModule.directive('sampleDirective', function () {
