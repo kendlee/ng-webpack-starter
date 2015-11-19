@@ -1,3 +1,2 @@
 require('./sampleDirective');
-
-export default {};
+export default 'sampleModule';
