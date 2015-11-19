@@ -20,10 +20,10 @@ module.exports = {
       PATHS.bower,
       PATHS.dev_scripts
     ],
-    alias: {
-      lodash: 'lodash',
-      angular: 'angular'
-    }
+    // alias: {
+    //   lodash: 'lodash',
+    //   angular: 'angular'
+    // }
   },
   module: {
     loaders: [
@@ -31,7 +31,9 @@ module.exports = {
         loader: 'exports?angular' },
       { test: /\.js$/,
         loader: 'babel?presets[]=es2015!semistandard',
-        exclude: /node_modules|bower_components/ }
+        exclude: /node_modules|bower_components/ },
+      { test: /\.css$/,
+        loader: 'style!css' }
     ]
   },
   devtool: 'source-map',

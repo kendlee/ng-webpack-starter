@@ -1,8 +1,11 @@
 'use strict';
+import 'babel-polyfill';
+// import 'angular-material/angular-material.css';
 import angular from 'angular';
+import ngMaterial from 'angular-material';
 import Test from 'es6Module/test';
 import SampleModule from 'sampleModule/index';
 
-angular.bootstrap(document, [SampleModule]);
+angular.bootstrap(document, [ngMaterial, SampleModule]);
 
 new Test('import & es6 works!').alert();

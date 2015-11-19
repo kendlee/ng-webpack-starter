@@ -4,6 +4,6 @@ import sampleModule from './module.js';
 sampleModule.directive('sampleDirective', function () {
   return {
     restrict: 'E',
-    template: 'Sample directive'
+    template: '<md-button class="md-raised md-primary">Primary</md-button>'
   };
 });
