@@ -37,7 +37,8 @@
     "karma-jasmine-html-reporter": "~0.1.8",
     "style-loader": "~0.13.0",
     "css-loader": "~0.23.0",
-    "babel-polyfill": "~6.2.0"
+    "babel-polyfill": "~6.2.0",
+    "es6-promise": "~3.0.2"
   },
   "dependencies": {
     "express": "~4.13.3"

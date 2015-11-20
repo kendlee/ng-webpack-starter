@@ -1,6 +1,7 @@
 'use strict';
 var webpack = require('webpack'),
-    path = require('path');
+    path = require('path'),
+    Promise = require('es6-promise').Promise;
 
 var PATHS = {
   bower: path.join(__dirname, 'bower_components'),
