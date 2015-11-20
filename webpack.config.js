@@ -27,7 +27,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /[\/]angular\.js$/,
+      { test: /angular\.js$/,
         loader: 'exports?angular' },
       { test: /\.js$/,
         loader: 'babel?presets[]=es2015!semistandard',
