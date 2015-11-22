@@ -1,22 +1,22 @@
 'use strict';
 
-var express = require('express'),
-    app = express(),
-    browserSync = require('browser-sync'),
-    PORT = process.env.PORT || 8080,
-    BROWSERSYNC_PORT = process.env.BROWSERSYNC_PORT || 3000;
+var express = require('express');
+var app = express();
+var browserSync = require('browser-sync');
+var PORT = process.env.PORT || 8080;
+var BROWSERSYNC_PORT = process.env.BROWSERSYNC_PORT || 3000;
 
 require('./backend/routes')(app);
 
 app.listen(PORT, listening);
 
-function listening() {
+function listening () {
   browserSync.init({
     open: false,
     port: BROWSERSYNC_PORT,
     proxy: 'localhost:' + PORT,
     files: ['app/**/*.{js,css,html}']
-  }, function() {
+  }, function () {
     console.log('Browser sync running on port: ' + BROWSERSYNC_PORT);
   });
 }

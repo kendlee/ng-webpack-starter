@@ -3,7 +3,7 @@
 var webpackConfig = require('./webpack.config.js');
 webpackConfig.entry = {};
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
     basePath: 'app',
     frameworks: ['jasmine'],
@@ -38,7 +38,7 @@ module.exports = function(config) {
       }
     },
 
-    reporters: ['nyan','html'],
+    reporters: ['nyan', 'html'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
@@ -49,5 +49,5 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultanous
     concurrency: Infinity
-  })
-}
+  });
+};

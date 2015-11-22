@@ -1,13 +1,14 @@
 'use strict';
-var webpack = require('webpack'),
-    path = require('path'),
-    Promise = require('es6-promise').Promise;
-
+var webpack = require('webpack');
+var path = require('path');
+var Promise = require('es6-promise').Promise;
 var PATHS = {
   bower: path.join(__dirname, 'bower_components'),
   dev_scripts: path.join(__dirname, 'app/scripts'),
   destination: path.join(__dirname, 'app')
-}
+};
+
+console.log('Shimming Promise for older nodeJS runtimes:', Promise !== undefined);
 
 module.exports = {
   context: PATHS.dev_scripts,
@@ -20,7 +21,7 @@ module.exports = {
     root: [
       PATHS.bower,
       PATHS.dev_scripts
-    ],
+    ]
     // alias: {
     //   lodash: 'lodash',
     //   angular: 'angular'
