@@ -5,7 +5,7 @@ gulp.task('semistandard', function () {
   return gulp.src(['./*.js', 'app/scripts/**/*.js', 'backend/**/*.js'])
     .pipe($.semistandard())
     .pipe($.semistandard.reporter('default', {
-      breakOnError: true
+      // breakOnError: true
     }));
 });
 
@@ -19,7 +19,7 @@ gulp.task('develop', ['webpack', 'semistandard'], function () {
   $.nodemon({
     script: 'server.js',
     ignore: ['app'],
-    tasks: ['lint']
+    tasks: ['semistandard']
   }).on('restart', function () {
     console.log('server restarted!');
   });
