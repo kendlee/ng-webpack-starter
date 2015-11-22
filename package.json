@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "bower install && webpack",
-    "start": "nodemon server.js",
+    "start": "webpack && nodemon server.js",
     "test": "karma start karma.conf.js",
     "webpack": "webpack -w --progress"
   },
@@ -40,6 +40,7 @@
     "karma-jasmine-html-reporter": "~0.1.8",
     "karma-nyan-reporter": "~0.2.2",
     "karma-webpack": "~1.7.0",
+    "lodash": "^3.10.1",
     "nodemon": "~1.8.1",
     "opn": "^3.0.3",
     "semistandard-loader": "0.0.3",
