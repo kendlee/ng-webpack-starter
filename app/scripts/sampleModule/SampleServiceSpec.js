@@ -1,6 +1,5 @@
 'use strict';
 describe('DeviceParameterServiceTest', function () {
-
   beforeEach(module('SampleModule'));
   var SampleServiceTest;
 
@@ -9,6 +8,6 @@ describe('DeviceParameterServiceTest', function () {
   }));
 
   it('should add correctly', function () {
-    expect(SampleServiceTest.add(1,2)).toBe(3);
+    expect(SampleServiceTest.add(1, 2)).toBe(3);
   });
 });
