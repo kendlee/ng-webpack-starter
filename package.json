@@ -4,7 +4,7 @@
   "description": "personalized angularJS starter kit using webpack",
   "main": "index.js",
   "scripts": {
-    "postinstall": "bower install && webpack",
+    "postinstall": "bower install",
     "start": "webpack && nodemon server.js",
     "test": "karma start karma.conf.js",
     "webpack": "webpack -w --progress"

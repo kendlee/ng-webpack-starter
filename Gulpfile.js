@@ -37,7 +37,7 @@ gulp.task('frontend-test', function (done) {
 gulp.task('watch', function () {
   gulp.watch(PATHS.allJsPaths, ['semistandard']);
   gulp.watch(PATHS.frontendJsWithoutTests, ['webpack']);
-  gulp.watch(PATHS.frontendTestJs, ['frontend-test']);
+  // gulp.watch(PATHS.frontendTestJs, ['frontend-test']);
 });
 
 gulp.task('develop', ['webpack', 'semistandard', 'watch'], function () {
