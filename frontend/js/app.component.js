@@ -1,5 +1,7 @@
+import template from './app.html';
+
 let appComponent = {
-  template: 'test',
+  template,
   restrict: 'E'
 };
 
