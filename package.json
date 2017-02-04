@@ -4,7 +4,6 @@
   "description": "personalized angularJS starter kit using webpack",
   "main": "index.js",
   "scripts": {
-    "postinstall": "bower install",
     "test": "karma start"
   },
   "repository": {
