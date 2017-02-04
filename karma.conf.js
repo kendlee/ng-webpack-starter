@@ -1,44 +1,43 @@
 // Karma configuration
 // Generated on Thu Nov 19 2015 22:05:20 GMT+0800 (PHT)
 var webpackConfig = require('./webpack.config.js');
-webpackConfig.entry = {};
 
 module.exports = function (config) {
   config.set({
-    basePath: 'app',
+    basePath: '',
     frameworks: ['jasmine'],
 
     files: [
-      'scripts/main.js',
-      '../bower_components/angular-mocks/angular-mocks.js',
-      '**/*Spec.js'
+      // 'scripts/main.js',
+      // '../bower_components/angular-mocks/angular-mocks.js',
+      'spec.bundle.js'
     ],
 
-    exclude: [
+    exclude: [],
+    plugins: [
+      require("karma-chrome-launcher"),
+      require("karma-jasmine"),
+      require("karma-jasmine-html-reporter"),
+      require("karma-nyan-reporter"),
+      require("karma-sourcemap-loader"),
+      require("karma-webpack")
     ],
 
     preprocessors: {
-      'scripts/main.js': ['webpack'],
-      '**/*Spec.js': ['babel']
-    },
-    webpack: webpackConfig,
-    webpackMiddleware: {
-      noInfo: true
-    },
-    babelPreprocessor: {
-      options: {
-        presets: ['es2015'],
-        sourceMap: 'inline'
-      },
-      filename: function (file) {
-        return file.originalPath.replace(/\.js$/, '.es5.js');
-      },
-      sourceFileName: function (file) {
-        return file.originalPath;
-      }
+      // 'scripts/main.js': ['webpack', 'sourcemap'],
+      'spec.bundle.js': ['webpack', 'sourcemap']
     },
 
-    reporters: ['nyan', 'html'],
+    webpack: {
+      devtool: 'inline-source-map',
+      module: webpackConfig.module
+    },
+
+    webpackServer: {
+      noInfo: true
+    },
+
+    reporters: ['nyan', 'kjhtml'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,

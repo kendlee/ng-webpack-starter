@@ -4,7 +4,8 @@
   "description": "personalized angularJS starter kit using webpack",
   "main": "index.js",
   "scripts": {
-    "postinstall": "bower install"
+    "postinstall": "bower install",
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,7 @@
     "url": "https://github.com/kdblitz/ng-webpack-starter/issues"
   },
   "devDependencies": {
+    "angular-mocks": "^1.6.1",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-plugin-transform-runtime": "^6.22.0",
@@ -25,6 +27,14 @@
     "browser-sync": "^2.18.6",
     "gulp": "^3.9.1",
     "html-webpack-plugin": "^2.28.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.4.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-nyan-reporter": "^0.2.5",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.2",
     "ng-annotate-loader": "^0.2.0",
     "raw-loader": "^0.5.1",
     "supports-color": "^3.2.3",
